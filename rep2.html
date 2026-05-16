@@ -1,0 +1,110 @@
+<h1 id="введение">Введение</h1>
+<p>В данной части мы ознакомимся с серверной работой</p>
+<h1 id="выполнение-работы">Выполнение работы</h1>
+<h4 id="знакомство-с-сервером.">1. Знакомство с сервером.</h4>
+<p>Важно, чтобы серверные данные должны быть защищены</p>
+<p><img
+src="file:///home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-16-59-16-image.png?msec=1778944419343" /></p>
+<p>.pub Является публичным ключом, его можно передавать по сети</p>
+<p><img
+src="file:///home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-17-00-48-image.png?msec=1778944419344" /></p>
+<h4 id="обмен-файлами.">2. Обмен файлами.</h4>
+<p>Какая команда скопирует на сервер (в домашнюю директорию) папку
+stepic вместе с содержимым ее самой и всех ее подпапок?</p>
+<p><img
+src="file:///home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-17-02-13-image.png?msec=1778944419345" /></p>
+<p>Сеть может быть заблокирована. Доступ к серверам нарушен</p>
+<p><img
+src="file:///home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-17-03-43-image.png?msec=1778944419384" /></p>
+<p>Filezilla имеет следующий функционал:</p>
+<p><img
+src="file:///home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-17-05-02-image.png?msec=1778944419346" /></p>
+<h4 id="запуск-приложений.">3. Запуск приложений.</h4>
+<p>Есть несколько путей решения:</p>
+<p><img
+src="file:///home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-17-07-28-image.png?msec=1778944419346" /></p>
+<p>program ?! выведет ошибку</p>
+<p><img
+src="file:///home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-17-08-10-image.png?msec=1778944419347" /></p>
+<p>Bypasses the normal sequence file format detection and forces the
+program to use the specified format.  Valid  formats :              
+<strong><u>bam,sam,bam_mapped,sam_mapped and fastq</u></strong></p>
+<p><img
+src="file:///home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-17-42-22-image.png?msec=1778944419357" /></p>
+<h4 id="контроль-запускаемых-программ.">4. Контроль запускаемых
+программ.</h4>
+<p>Предположим вы запустили программы program1, program2 и program3 в
+фоновом режиме. После этого вы выполнили следующие действия:<br />
+<code>fg %1</code><br />
+Ctrl+С<br />
+<code>fg %2</code><br />
+Ctrl+Z<br />
+<code>jobs</code></p>
+<p>Информация о каких программах будет показана при выполнении команды
+<code>jobs</code>?</p>
+<p>Первый процесс будет удален</p>
+<p><img
+src="file:///home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-17-50-06-image.png?msec=1778944419353" /></p>
+<p>Так как данные команды взаимодейтсвуют с PID</p>
+<p><img
+src="file:///home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-17-55-01-image.png?msec=1778944419359" /></p>
+<p><img
+src="file:///home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-17-55-56-image.png?msec=1778944419379" /></p>
+<p>Программа завершится, когда выйдет в строй</p>
+<p><img
+src="file:///home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-17-58-00-image.png?msec=1778944419376" /></p>
+<h4
+id="многопоточные-приложения.-сколько-вычислительных-ресурсов-центрального-процессора-cpu-использует-остановленное-по-ctrlz-многопоточное-приложение">5.
+Многопоточные приложения. <strong>Сколько вычислительных
+ресурсов</strong> <strong>центрального процессора</strong> (% CPU)
+использует остановленное (по Ctrl+Z) многопоточное приложение?</h4>
+<p>Учитывайте, что 100% CPU означает загрузку одного процессора, 200%
+CPU – двух процессоров (на <em><a
+href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BD%D0%BE%D0%B3%D0%BE%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C">многопроцессорных</a></em>
+и/или <em><a
+href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BD%D0%BE%D0%B3%D0%BE%D1%8F%D0%B4%D0%B5%D1%80%D0%BD%D1%8B%D0%B9_%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D1%80">многоядерных</a></em>
+компьютерах<em>)</em> и т.д. Например, <em>выполняющееся</em> в 4 потока
+приложение обычно использует около 400% CPU, однако наш вопрос касается
+именно момента <em>после остановки</em> такого приложения.</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-18-16-16-image.png" /></p>
+<p><strong>Сколько</strong> <strong>памяти</strong> занимает
+остановленное (по Ctrl+Z) многопоточное приложение?</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-18-17-15-image.png" /></p>
+<p>Как принудительно завершить один из потоков запущенного
+многопоточного приложения?</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-18-18-54-image.png" /></p>
+<p>Для выполнения этого задания вам потребуется программа bowtie2.</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-18-21-13-image.png" /></p>
+<h4 id="менеджер-терминалов-tmux.">6. Менеджер терминалов tmux.</h4>
+<p><a href="http://tmux.sourceforge.net">tmux</a> - это специальная
+программа, которая может объединять в себе несколько терминалов, каждый
+из которых содержит свои процессы</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-18-27-48-image.png" /></p>
+<p>Завершает работу</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-18-28-18-image.png" /></p>
+<p>Предположим, что вы открыли терминал, зашли в нем на сервер,
+запустили на этом сервере tmux и начали работу в нем. Что произойдет,
+если вы теперь закроете терминал?</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-18-30-34-image.png" /></p>
+<p>Что произойдет, если запустить процесс в фоновом режиме в одной из
+вкладок tmux, а затем принудительно закрыть эту вкладку (Ctrl+B, X)?</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-18-30-58-image.png" /></p>
+<p>Изучите справку по tmux (например, <code>man tmux</code>) и выберите
+из предложенных ниже tmux-команд ту, которая отвечает за
+<strong>переименование</strong> текущей вкладки.</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-18-34-52-image.png" /></p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-18-35-13-image.png" /></p>
+<h1 id="вывод">Вывод</h1>
+<p>В ходе выполнения данной лабораторной я ознакомился с серверами,
+многопоточными приложеняими, контролем за приложениямиб и менеджером
+терминалов tmux</p>

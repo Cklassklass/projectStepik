@@ -1,0 +1,141 @@
+<h1 id="введение">Введение</h1>
+<p>В этой главе будем изучать базовый функционал Linux. В моем случе
+буду использовать дистрибутив FEDORA.</p>
+<h1 id="выполнение-работы">Выполнение работы</h1>
+<h4 id="установка-linux.">1. Установка Linux.</h4>
+<p>На моем устройстве установлена виртуальная машина с
+дистрибутивом:</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-14-41-30-image.png" /></p>
+<p>Ответим на вопрос “что такое виртуальная машина?”</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-14-43-29-image.png" /></p>
+<p>и на следующий вопрос</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-14-44-47-image.png" /></p>
+<h4 id="осваиваем-linux.">2 Осваиваем Linux.</h4>
+<p>Создайте документ в OpenOffice/LibreOffice Writer (аналог Microsoft
+Word) и напишите в нём шрифтом <strong>FreeMono</strong> (если такого
+шрифта у вас нет, то используйте <strong>Arial</strong> или
+<strong>Times New Roman</strong>) одну-единственную строчку:</p>
+<p>Hello, Linux!</p>
+<p>После этого сохраните этот документ в формате <strong>XML</strong>
+(<strong>Microsoft Word 2003 XML</strong>) или в формате
+<strong>FODT</strong> (<strong>OpenDocument Text: Flat XML</strong>) и
+загрузите в форму ниже.</p>
+<p>Задание выполнено: <img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-14-52-27-image.png" /></p>
+<p>Расширение .deb унаследовано от Debian</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-14-54-17-image.png" /></p>
+<p>Скачаем VLC в магазине приложений и выполним следующее задание:</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-15-04-00-image.png" /></p>
+<p>Ознакомились с фунционалом Update Manager</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-15-06-40-image.png" /></p>
+<h4 id="terminal-основы.">3. Terminal: основы.</h4>
+<p>Выбираем синонимы к командой строке</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-15-11-48-image.png" /></p>
+<p>важно учитывать регистр</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-15-12-30-image.png" /></p>
+<p>Укажем, какие из следующих команд полностью эквивалентны команде
+<code>ls -A --human-readable -l /some/directory</code></p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-15-21-47-image.png" /></p>
+<p>Предположим, что вы находитесь в
+директории <code>/home/bi/Documents</code>, причем <code>/home/bi</code>
+— ваша домашняя директория. Какая(ие) команда выведет
+содержимое <code>/home/bi/Downloads</code>, при этом не показывая
+содержимое других директорий?</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-15-30-29-image.png" /></p>
+<p>Для удаление каталогов используем следующую команду:</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-15-31-06-image.png" /></p>
+<h4 id="запуск-исполняемых-файлов.">4. Запуск исполняемых файлов.</h4>
+<p>Во время запуска firefox терминал не откликается:</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-15-35-28-image.png" /></p>
+<p>Запуск с &amp; эквивалентен:</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-15-36-53-image.png" /></p>
+<p>Скопируем текст программы в .sh файл и запустим</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-15-41-01-image.png" /></p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-15-41-45-image.png" /></p>
+<h4 id="ввод-вывод.">5. Ввод / вывод.</h4>
+<p>Поток ошибок выводится на экран</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-15-43-21-image.png" /></p>
+<p><strong><code>&gt;</code></strong> Перенаправляет стандартный вывод
+(stdout) в файл. Если файл существует, он будет перезаписан.</p>
+<p><strong><code>&gt;&gt;</code></strong> Перенаправляет стандартный
+вывод (stdout) в файл. Если файл существует, данные будут добавлены в
+конец файла.</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-15-51-10-image.png" /></p>
+<p>Куда деваются сообщения об ошибках (т.е. вывод в stderr) от тех
+программ, которые объединены в конвейер (pipe)?</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-15-52-05-image.png" /></p>
+<h4 id="скачивание-файлов-из-интернета.">6. Скачивание файлов из
+интернета.</h4>
+<p>Если бы вы хотели сохранить файл под именем 1.jpg именно в папку
+Pictures, нужно было либо указать полный путь в -O, либо использовать
+только -P (тогда файл сохранил бы оригинальное имя example.jpg).</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-15-57-04-image.png" /></p>
+<p>Видно по названию</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-16-03-21-image.png" /></p>
+<p>Пусть на некоторой web-странице есть ссылки на картинки в форматах
+png и jpg, а также ссылки на другие страницы сайта (обычные html файлы).
+Какие файлы будут скачаны на компьютер, если запустить
+<code>wget -r -l 1 -A jpg</code> и передать в качестве аргумента ссылку
+на эту web-страницу? Выберите наиболее полный ответ!</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-16-04-25-image.png" /></p>
+<h4 id="работа-с-архивами.">7. Работа с архивами.</h4>
+<p>Основное отличие заключается в том, что <strong>ZIP</strong> — это
+полноценный архиватор (способен объединять множество файлов и папок в
+один контейнер), а <strong>gzip</strong> — это лишь инструмент для
+сжатия отдельных данных.</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-16-10-17-image.png" /></p>
+<p>gzip архивирует каждый конкретный файл</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-16-10-42-image.png" /></p>
+<p>с - create</p>
+<p>j - bz2</p>
+<p>f - по имени файла</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-16-11-33-image.png" /></p>
+<h4 id="поиск-файлов-и-слов-в-файлах.">8. Поиск файлов и слов в
+файлах.</h4>
+<p>alexye != Alexey</p>
+<p>.? .jpg не совпадают с концовкой файла</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-16-14-46-image.png" /></p>
+<p>Предположим, что в файле  <code>text.txt</code> записаны строки,
+показанные среди вариантов ответа. Отметьте только те из них, которые
+выведет на экран команда  <code>grep "world" text.txt</code>.</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-16-19-03-image.png" /></p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-16-19-23-image.png" /></p>
+<p>Cкачайте <a
+href="https://stepik.org/media/attachments/course73/shakespeare.tar.gz">архив</a> с
+произведениями Шекспира. Вам нужно сгенерировать файл, в котором будут
+все строчки из этих произведений, содержащие “love”, и загрузить этот
+файл в форму.</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-16-24-42-image.png" /></p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-16-25-36-image.png" /></p>
+<h1 id="вывод">Вывод</h1>
+<p>В ходе выполнения данной работы я ознакомился с базовым функционалом
+виртуальной машины и OC Linux.</p>

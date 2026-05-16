@@ -1,0 +1,307 @@
+<p>####5</p>
+<h1 id="введение">Введение</h1>
+<p>Третья часть посвящена более сложным и интересным темам, таким, как
+редактор Vim, интерпретатор bash и другие приложения.</p>
+<h1 id="выполнение-работы">Выполнение работы</h1>
+<h4 id="текстовый-редактор-vim.">1. Текстовый редактор vim.</h4>
+<p>На этом занятии мы рассмотрим гораздо более мощный редактор
+<strong>[vim]</strong>.</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-19-04-09-image.png" /></p>
+<p>При перемещении в vim “по словам” есть небольшая разница в том,
+используем мы маленькую (w, e, b) или большую (W, E, B) букву. Первые
+перемещают нас по “словам” (word), а вторые по “большим словам” (WORD).
+Посмотрите справку по этим перемещениям и разберитесь в чем заключается
+разница между word и WORD.</p>
+<p>А для того, чтобы убедиться, что вы разобрались, отметьте ниже
+<strong>все</strong> <strong>верные</strong> утверждения про следующую
+строку:<br />
+<code>Strange_  TEXT  is_here. 2=2 YES!</code></p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-19-09-07-image.png" /></p>
+<p>Один из способов:</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-19-18-56-image.png" /></p>
+<p>Мы совсем не рассказали вам про третий режим работы vim – режим
+<strong>выделения</strong> (<strong>Visual</strong>). Предлагаем вам
+ознакомиться с ним самостоятельно. Например, это можно сделать во время
+прохождения упражнений в vimtutor, который мы настоятельно рекомендуем
+вам для изучения vim!</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-19-19-42-image.png" /></p>
+<h4 id="скрипты-на-bash-основы.">2. Скрипты на bash: основы.</h4>
+<p>Надеемся, что вы разобрались, что одну оболочку (например,
+<code>sh</code>) можно запустить из другой оболочки (например, из
+<code>bash</code>).</p>
+<p>Предположим, что вы открыли терминал и у вас в нем запущена оболочка
+<code>bash</code>. Вы набираете в ней команды <code>А1</code>,
+<code>А2</code>, <code>А3</code>, а затем запускаете оболочку
+<code>sh</code>. В этой оболочке вы набираете команды <code>B1</code>,
+<code>В2</code>, <code>В3</code> и запускаете оболочку
+<code>bash</code>. И, наконец, в этой последней оболочке вы набираете
+команды <code>С1</code>, <code>С2</code>, <code>С3</code>. Если теперь
+вы попробуете при помощи стрелочек вверх/вниз перемещаться по истории
+набранных команд, то команды из какого набора(ов) будут появляться?</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-19-22-11-image.png" /></p>
+<p>Так как создание файла происходило в каталоге bi</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-19-23-10-image.png" /></p>
+<p>Вы можете скачать и изучить скрипты, которые мы показали в
+видеофрагменте:</p>
+<p>Какие из представленных ниже строк <strong>могут</strong> быть
+именами переменных в bash? Выберите <strong>все</strong> подходящие
+варианты!</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-19-27-38-image.png" /></p>
+<p>Пропишем следующий код:</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-19-30-07-image.png" /></p>
+<h4 id="скрипты-на-bash-ветвления-и-циклы.">3. Скрипты на bash:
+ветвления и циклы.</h4>
+<p>Предположим, вы пишете скрипт на bash и хотите использовать в нем
+конструкцию <code>if</code> в следующем фрагменте:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode lua"><code class="sourceCode lua"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="vs">[[ ... ]]</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">then</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  echo <span class="st">&quot;True&quot;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="va">fi</span></span></code></pre></div>
+<p>Вы можете вписать вместо “…” (внутри <code>[[ ]]</code> и <strong>не
+забудьте про пробелы</strong> после [[ и перед ]]!) любое из
+перечисленных ниже условий. Однако мы просим вас выбрать только те из
+них, при которых <code>echo</code> напечатает на экран <code>True</code>
+вне зависимости от того, с какими параметрами был запущен ваш скрипт и
+какие в нем есть переменные.</p>
+<p>Например, условие <code>0 -eq 0</code> <strong>подходит</strong>,
+т.к. ноль всегда равен нулю вне зависимости от аргументов и переменных
+внутри скрипта и на экран будет напечатано <code>True</code>.  В то же
+время условие <code>$var1 -eq 0</code> <strong>не подходит</strong>, так
+как в переменной <code>var1</code> как может быть записан ноль (тогда
+будет напечатано <code>True</code>), так его может и не быть (тогда
+ничего напечатано не будет).</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-19-45-35-image.png" /></p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-19-45-52-image.png" /></p>
+<p>Посмотрите на фрагмент bash-скрипта:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode lua"><code class="sourceCode lua"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="vs">[[ $var -gt 5 ]]</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">then</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  echo <span class="st">&quot;one&quot;</span> </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>elif <span class="vs">[[ $var -lt 3 ]]</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">then</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  echo <span class="st">&quot;two&quot;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>elif <span class="vs">[[ $var -eq 4 ]]</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="cf">then</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  echo <span class="st">&quot;three&quot;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  echo <span class="st">&quot;four&quot;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="va">fi</span></span></code></pre></div>
+<p><strong>Какие строки</strong> и в какой последовательности он выведет
+на экран, если сначала этот скрипт запустили задав переменную
+<strong>var=3</strong>, а затем запустили еще раз, но уже с
+<strong>var=5</strong>.<img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-19-50-41-image.png" /></p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-19-50-57-image.png" /></p>
+<p>Напишите скрипт на bash, который принимает на вход один аргумент
+(целое число от 0 до бесконечности), который будет обозначать число
+студентов в аудитории. В зависимости от значения числа нужно вывести
+разные сообщения. </p>
+<p>Соответствие входа и выхода должно быть таким:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode lua"><code class="sourceCode lua"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span> <span class="co">--&gt;  No students</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="co">--&gt;  1 student</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="co">--&gt;  2 students</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="co">--&gt;  3 students</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="co">--&gt;  4 students</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> и больше <span class="co">--&gt; A lot of students</span></span></code></pre></div>
+<p>Скрипт:</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-19-53-50-image.png" /></p>
+<p>Посмотрите на фрагмент bash-скрипта:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> str <span class="kw">in</span> a , b , c_d</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">do</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex"> </span> echo <span class="st">&quot;start&quot;</span>  </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="kw">[[</span> <span class="va">$str</span> <span class="ot">&gt;</span> <span class="st">&quot;c&quot;</span> <span class="kw">]]</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">then</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ex"> </span>   continue</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">fi</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex"> </span> echo <span class="st">&quot;finish&quot;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code></pre></div>
+<p>Если запустить этот скрипт, то <strong>сколько раз</strong> на экран
+будет выведено слово “<strong>start</strong>”, а сколько раз слово
+“<strong>finish</strong>”?</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-19-54-51-image.png" /></p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-19-55-31-image.png" /></p>
+<p>Напишите скрипт на bash, который будет определять в какую возрастную
+группу попадают пользователи. При запуске скрипт должен вывести
+сообщение “<strong>enter your name:</strong>” и ждать от пользователя
+ввода имени (используйте <code>read</code>, чтобы прочитать его). Когда
+имя введено, то скрипт должен написать “<strong>enter your
+age:</strong>” и ждать ввода возраста (опять нужен <code>read</code>).
+Когда возраст введен, скрипт пишет на экран “<strong><Имя>, your group
+is <группа></strong>”, где <strong><группа></strong> определяется на
+основе возраста по следующим правилам:</p>
+<ul>
+<li>младше либо равно 16: “<strong>child</strong>”,</li>
+<li>от 17 до 25 (включительно): “<strong>youth</strong>”,</li>
+<li>старше 25: “<strong>adult</strong>”.</li>
+</ul>
+<p>После этого скрипт опять выводит сообщение “<strong>enter your
+name:</strong>” и всё начинается по новой (бесконечный цикл!). Если в
+какой-то момент работы скрипта будет введено <strong>пустое имя</strong>
+или <strong>возраст 0</strong>, то скрипт должен написать на экран
+“<strong>bye</strong>” и закончить свою работу (выход из цикла!).</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-19-59-57-image.png" /></p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-20-00-21-image.png" /></p>
+<h4 id="скрипты-на-bash-разное">4. Скрипты на bash: разное</h4>
+<p>Какие(ая) из предложенных ниже инструкций увеличат значение
+переменной <code>а</code> на значение переменной <code>b</code>?
+Например, если в <code>а</code> было записано 10, в <code>b</code> было
+5, то в <code>а</code> должно записаться 15.  Выберите
+<strong>все</strong> <strong>подходящие</strong> варианты!</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-20-17-25-image.png" /></p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-20-17-42-image.png" /></p>
+<p>Пусть вы находитесь в директории <code>/home/bi/Documents/</code> и
+запускаете в ней скрипт следующего содержания:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /home/bi/</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;</span><span class="kw">`</span><span class="bu">pwd</span><span class="kw">`</span><span class="st">&quot;</span></span></code></pre></div>
+<p><strong>Что</strong> в этом случае выведет команда <code>echo</code>
+на экран?</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-20-19-08-image.png" /></p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-20-23-15-image.png" /></p>
+<p>Вы можете скачать и изучить скрипты, которые мы показали в
+видеофрагменте: <a
+href="https://stepik.org/media/attachments/course73/bash_scripts/functions1.sh">functions1.sh</a>,
+<a
+href="https://stepik.org/media/attachments/course73/bash_scripts/functions2.sh">functions2.sh</a>.</p>
+<p>Посмотрите на функцию из bash-скрипта:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode lua"><code class="sourceCode lua"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>counter <span class="op">()</span>  <span class="op">#</span> <span class="va">takes</span> <span class="va">one</span> <span class="va">argument</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">let</span> <span class="st">&quot;c1+=$1&quot;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  let <span class="st">&quot;c2+=${1}*2&quot;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> </span></code></pre></div>
+<p> Впишите в форму ниже <strong>строку</strong>, которую выведет на
+экран команда <code>echo "counters are $c1 and $c2"</code> если она
+находится в скрипте <strong>после десяти вызовов</strong> функции
+<code>counter</code> с параметрами сначала 1, затем 2, затем 3 и т.д.,
+последний вызов с параметром 10.</p>
+<p><strong>Подсказка</strong>: этот пример можно решить в уме, но если
+система проверки не принимает ваше решение, то возможно вы что-то
+упустили (возможно что-то совсем небольшое/невидимое ). В этом случае
+имеет смысл написать небольшой скрипт на bash, который проделает ровно
+то, что указано в задании и посимвольно сверить свой ответ с тем, что он
+выдаст на экран.</p>
+<p>Воспользуемся подсказкой и посчитаем в уме:</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-20-33-56-image.png" /></p>
+<p>Напишите скрипт на bash, который будет искать наибольший общий
+делитель (<a
+href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D0%B8%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%B8%D0%B9_%D0%BE%D0%B1%D1%89%D0%B8%D0%B9_%D0%B4%D0%B5%D0%BB%D0%B8%D1%82%D0%B5%D0%BB%D1%8C">НОД</a>,
+greatest common divisor, GCD) двух чисел. При запуске ваш скрипт не
+должен ничего писать на экран, а просто ждет ввода двух натуральных
+чисел через пробел (для этого можно использовать <code>read</code> и
+указать ему две переменные – см. пример в видеофрагменте). После ввода
+чисел скрипт считает их НОД и выводит на экран сообщение <strong>“GCD is
+<посчитанное значение>”</strong>, например, для чисел 15 и 25 это будет
+“GCD is 5”. После этого скрипт опять входит в режим ожидания двух
+натуральных чисел. Если в какой-то момент работы пользователь ввел
+вместо этого пустую строку, то нужно написать на экран
+“<strong>bye</strong>” и закончить свою работу. </p>
+<p>Вычисление НОД несложно реализовать с помощью <a
+href="https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%95%D0%B2%D0%BA%D0%BB%D0%B8%D0%B4%D0%B0">алгоритма
+Евклида</a>. Вам нужно написать функцию <code>gcd</code>, которая
+принимает на вход два аргумента (назовем их <strong>M</strong> и
+<strong>N</strong>). <strong>Если аргументы равны</strong>, то мы нашли
+НОД – он равен <strong>M</strong> (или <strong>N</strong>), нужно
+выводить соответствующее сообщение на экран (см. выше). Иначе нужно
+сравнить аргументы между собой. Если <strong>M</strong>
+<strong>больше</strong> <strong>N</strong>, то запускаем ту же функцию
+<code>gcd</code>, но в качестве первого аргумента передаем
+(<strong>M</strong>-<strong>N</strong>), а в качестве второго
+<strong>N</strong>. Если же наоборот, <strong>M</strong> меньше
+<strong>N</strong>, то запускаем функцию <code>gcd</code> с первым
+аргументом <strong>M</strong>, а вторым
+(<strong>N</strong>-<strong>M</strong>).</p>
+<p>Пример корректной работы скрипта:</p>
+<pre class="applescript"><code>./script.sh
+10 15
+GCD is 5
+7 3 
+GCD is 1
+
+bye</code></pre>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-20-36-00-image.png" /></p>
+<p>Напишите <strong>калькулятор</strong> на bash. При запуске ваш скрипт
+должен ожидать ввода пользователем команды (при этом на экран выводить
+ничего не нужно). Команды могут быть трех типов: </p>
+<ol type="1">
+<li><p>Слово “<strong>exit</strong>”. В этом случае скрипт должен
+вывести на экран слово “bye” и завершить работу. </p></li>
+<li><p><strong>Три аргумента через пробел</strong> – первый операнд
+(целое число), операция (одна из “+”, “-”, “*“,”/“,”%“,”**“) и второй
+операнд (целое число). В этом случае нужно произвести указанную операцию
+над заданными числами и вывести результат на экран. После этого
+переходим в режим ожидания новой команды.</p></li>
+<li><p><strong>Любая другая команда</strong> из одного аргумента или из
+трех аргументов, но с операцией не из списка<strong>.</strong> В этом
+случае нужно вывести на экран слово “<strong>error</strong>” и завершить
+работу.</p></li>
+</ol>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-20-37-00-image.png" /></p>
+<h4 id="продвинутый-поиск-и-редактирование">5. Продвинутый поиск и
+редактирование</h4>
+<p>Пусть в директории <code>/home/bi</code> лежат файлы
+<code>Star_Wars.avi, star_trek_OST.mp3, STARS.txt, stardust.mpeg, Eddard_Stark_biography.txt</code>.</p>
+<p>Отметьте все файлы, которые <strong>найдет</strong> команда
+<code>find /home/bi -iname "star*"</code>, но <strong>НЕ найдет</strong>
+команда <code>find /home/bi -name "star*"</code>?</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-20-44-27-image.png" /></p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-20-59-59-image.png" /></p>
+<p>На самом нижнем уровне не будет поиска</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-21-00-46-image.png" /></p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-21-02-19-image.png" /></p>
+<p>ОБратим внимание на конем команды (buntu)</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-21-03-55-image.png" /></p>
+<p>По умолчанию вывод дважды</p>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-21-05-08-image.png" /></p>
+<p>Запишите в форму ниже инструкцию <code>sed</code>, которая заменит
+все “<em>аббревиатуры</em>” в файле <code>input.txt</code> на слово
+“abbreviation” и запишет результат в файл <code>edited.txt</code> (на
+экран при этом ничего выводить не нужно). Обратите внимание, что
+<strong>в инструкции должны быть</strong> указаны и
+сам <code>sed</code>, и оба файла!</p>
+<p>Под “<em>аббревиатурой</em>” будем понимать слово, которое
+удовлетворяет следующим условиям: </p>
+<ul>
+<li><p>состоит только из больших букв латинского алфавита,</p></li>
+<li><p>состоит из хотя бы двух букв,</p></li>
+<li><p>окружено одним пробелом с каждой стороны.</p></li>
+</ul>
+<p><img
+src="/home/gkibragimov/snap/marktext/9/.config/marktext/images/2026-05-16-21-06-29-image.png" /></p>
+<h1 id="вывод">Вывод</h1>
+<p>В ходе выполнения данной лабораторнйо работы я ознакомился с
+продвинутыми скриптами консоли OC Linux</p>
